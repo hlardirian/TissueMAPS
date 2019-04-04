@@ -18,6 +18,7 @@ on disk.
 import collections
 import logging
 from jtlib.utils import label
+import numpy as np
 
 logger = logging.getLogger(__name__)
 
