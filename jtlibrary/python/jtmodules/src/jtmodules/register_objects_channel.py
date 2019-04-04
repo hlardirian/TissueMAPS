@@ -32,7 +32,7 @@ def main(mask):
     mask is provided the image is automatically labeled.
     Parameters
     ----------
-    mask: numpy.ndarray[Union[numpy.bool, numpy.int32]]
+    mask: numpy.ndarray[Union[numpy.bool, numpy.uint16]]
         binary or labeled mask
     Returns
     -------
