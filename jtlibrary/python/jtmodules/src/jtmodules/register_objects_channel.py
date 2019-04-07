@@ -48,5 +48,6 @@ def main(mask):
         label_image = label(mask)
     else:      
         label_image = mask
+        label_image[label_image > 5000] = 0;
         label_image = label_image.astype(dummy_image.dtype)
     return Output(label_image)
