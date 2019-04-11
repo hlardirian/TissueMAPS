@@ -112,5 +112,5 @@ class Classification(Classifier):
             )
             predicted_labels = self.predict(test_set, model, scaler)
             self.save_result_values(
-                mapobject_type_name, result_id, labels
+                mapobject_type_name, result_id, predicted_labels
             )
