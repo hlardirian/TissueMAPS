@@ -42,12 +42,11 @@ def main(mask):
     --------
     :class:`tmlib.workflow.jterator.handles.SegmentedObjects`
     '''
-    dummy_image = np.zeros(shape=mask.shape,
-                              dtype=np.int32)
+    
     if mask.dtype == 'bool':
         label_image = label(mask)
     else:      
         label_image = mask
-        label_image[label_image > 5000] = 0;
-        label_image = label_image.astype(dummy_image.dtype)
+        #label_image[label_image > 5000] = 0
+        label_image = label_image.astype(np.int32)
     return Output(label_image)
